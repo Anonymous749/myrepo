@@ -1,19 +1,21 @@
 #include <stdio.h>
 
-int percent(int a,b){
-  int per = (a/b)*100;
+float percent(float a,float b){
+  float per;
+  per = a/b*100;
   return per;
 }
 
 int main(){
-  int user;
-  int total = 500;
+   float user;
+  float total = 500;
+  float per;
 
   printf("Enter the marks:");
-  scanf("%d",&user);
+  scanf("%f",&user);
 
-  int per = percent(user,total);
-  printf("percentage:%d\n",per);
+   per = percent(user,total);
+  printf("percentage:%.2f\n",per);
   if(per < 60){
     printf("You have to work hard");
   }
